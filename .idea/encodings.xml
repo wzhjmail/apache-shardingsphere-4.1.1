@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/encrypt-core/encrypt-core-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/encrypt-core/encrypt-core-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/encrypt-core/encrypt-core-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/encrypt-core/encrypt-core-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-spi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-spi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-binder/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-binder/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/shardingsphere-sql-parser-mysql/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/shardingsphere-sql-parser-mysql/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/shardingsphere-sql-parser-oracle/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/shardingsphere-sql-parser-oracle/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-engine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-spi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-statement/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/shardingsphere-sql-parser-statement/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-sql-parser/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-rewrite/shardingsphere-rewrite-engine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-rewrite/shardingsphere-rewrite-engine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-underlying/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-underlying/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -4,13 +4,73 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>apache-shardingsphere-4.1.1</artifactId>
+    <parent>
+        <groupId>org.apache</groupId>
+        <artifactId>apache</artifactId>
+        <version>21</version>
+    </parent>
+    <groupId>org.apache.shardingsphere</groupId>
+    <artifactId>shardingsphere</artifactId>
+    <version>4.1.1</version>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <name>${project.artifactId}</name>
+
     <modules>
-        <module>shardingsphere-sql-parser-engine</module>
+        <module>shardingsphere-sql-parser</module>
+        <module>shardingsphere-spi</module>
+        <module>shardingsphere-underlying</module>
+        <module>shardingsphere-underlying/shardingsphere-rewrite</module>
+        <module>encrypt-core</module>
+        <module>shardingsphere-underlying/shardingsphere-common</module>
+        <module>encrypt-core/encrypt-core-api</module>
+        <module>shardingsphere-sql-parser/shardingsphere-sql-parser-dialect</module>
+        <module>shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/shardingsphere-sql-parser-mysql</module>
+        <module>shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/shardingsphere-sql-parser-oracle</module>
     </modules>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <lombok.version>1.16.20</lombok.version>
+        <antlr4.version>4.7.2</antlr4.version>
+        <guava.version>18.0</guava.version>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>${antlr4.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>apache-shardingsphere-${project.version}</finalName>
+        <plugins>
+        <!-- mvn -N io.takari:maven:wrapper -Dmaven=3.5.4 -->
+        <plugin>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-maven-plugin</artifactId>
+            <version>${antlr4.version}</version>
+        </plugin>
+        </plugins>
+    </build>
 </project>
