@@ -10,6 +10,7 @@
         <module name="shardingsphere-common" />
         <module name="shardingsphere-sql-parser-statement" />
         <module name="shardingsphere-sql-parser-oracle" />
+        <module name="encrypt-core-api" />
         <module name="shardingsphere-sql-parser-spi" />
         <module name="shardingsphere-rewrite-engine" />
         <module name="shardingsphere-spi" />
@@ -17,11 +18,8 @@
         <module name="encrypt-core-common" />
         <module name="shardingsphere-sql-parser-mysql" />
         <module name="shardingsphere-sql-parser-binder" />
-        <module name="shardingsphere-sql-parser-dialect" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="encrypt-core-api" target="1.8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

@@ -16,11 +16,10 @@
     <name>${project.artifactId}</name>
 
     <modules>
-        <module>shardingsphere-sql-parser</module>
-        <module>shardingsphere-spi</module>
-        <module>shardingsphere-underlying</module>
         <module>encrypt-core</module>
+        <module>shardingsphere-spi</module>
         <module>shardingsphere-sql-parser</module>
+        <module>shardingsphere-underlying</module>
     </modules>
 
     <properties>

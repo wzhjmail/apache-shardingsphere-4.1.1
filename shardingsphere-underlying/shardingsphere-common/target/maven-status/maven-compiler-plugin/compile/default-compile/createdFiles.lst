@@ -1,0 +1,4 @@
+org/apache/shardingsphere/underlying/common/config/TypeBasedSPIConfiguration.class
+org/apache/shardingsphere/underlying/common/exception/ShardingSphereException.class
+org/apache/shardingsphere/underlying/common/rule/BaseRule.class
+org/apache/shardingsphere/underlying/common/config/RuleConfiguration.class

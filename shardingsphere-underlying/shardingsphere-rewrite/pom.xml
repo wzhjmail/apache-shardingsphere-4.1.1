@@ -6,7 +6,6 @@
         <artifactId>shardingsphere</artifactId>
         <groupId>org.apache.shardingsphere</groupId>
         <version>4.1.1</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>shardingsphere-rewrite</artifactId>

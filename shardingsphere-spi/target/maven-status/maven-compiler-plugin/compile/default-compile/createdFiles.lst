@@ -1,0 +1,3 @@
+org/apache/shardingsphere/spi/NewInstanceServiceLoader.class
+org/apache/shardingsphere/spi/TypeBasedSPIServiceLoader.class
+org/apache/shardingsphere/spi/TypeBasedSPI.class

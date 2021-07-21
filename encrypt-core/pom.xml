@@ -11,6 +11,7 @@
     <name>${project.artifactId}</name>
     <modules>
         <module>encrypt-core-common</module>
+        <module>encrypt-core-api</module>
     </modules>
     <artifactId>encrypt-core</artifactId>
     <packaging>pom</packaging>
