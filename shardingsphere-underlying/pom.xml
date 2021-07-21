@@ -16,5 +16,6 @@
 
     <modules>
     <module>shardingsphere-rewrite</module>
+    <module>shardingsphere-common</module>
     </modules>
 </project>

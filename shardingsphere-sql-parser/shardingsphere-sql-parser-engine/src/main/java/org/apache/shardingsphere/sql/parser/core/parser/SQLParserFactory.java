@@ -6,7 +6,6 @@ import lombok.SneakyThrows;
 import org.antlr.v4.runtime.*;
 import org.apache.shardingsphere.spi.NewInstanceServiceLoader;
 import org.apache.shardingsphere.sql.parser.api.parser.SQLParser;
-import org.apache.shardingsphere.sql.parser.mysql.MySQLParserConfiguration;
 import org.apache.shardingsphere.sql.parser.spi.SQLParserConfiguration;
 
 import java.util.Collection;
@@ -33,7 +32,6 @@ public final class SQLParserFactory {
      * @return SQL parser
      */
     public static SQLParser newInstance(final String databaseTypeName, final String sql) {
-        NewInstanceServiceLoader.register(MySQLParserConfiguration.class);
         Collection<SQLParserConfiguration> configurations = NewInstanceServiceLoader.newServiceInstances(SQLParserConfiguration.class);
         for (SQLParserConfiguration each : configurations) {
             if (each.getDatabaseTypeName().equals(databaseTypeName)) {

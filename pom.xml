@@ -19,13 +19,8 @@
         <module>shardingsphere-sql-parser</module>
         <module>shardingsphere-spi</module>
         <module>shardingsphere-underlying</module>
-        <module>shardingsphere-underlying/shardingsphere-rewrite</module>
         <module>encrypt-core</module>
-        <module>shardingsphere-underlying/shardingsphere-common</module>
-        <module>encrypt-core/encrypt-core-api</module>
-        <module>shardingsphere-sql-parser/shardingsphere-sql-parser-dialect</module>
-        <module>shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/shardingsphere-sql-parser-mysql</module>
-        <module>shardingsphere-sql-parser/shardingsphere-sql-parser-dialect/shardingsphere-sql-parser-oracle</module>
+        <module>shardingsphere-sql-parser</module>
     </modules>
 
     <properties>
@@ -33,6 +28,8 @@
         <lombok.version>1.16.20</lombok.version>
         <antlr4.version>4.7.2</antlr4.version>
         <guava.version>18.0</guava.version>
+
+        <commons-collections4.version>4.2</commons-collections4.version>
     </properties>
 
     <dependencies>
@@ -49,16 +46,15 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-runtime</artifactId>
             <version>${antlr4.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections4.version}</version>
         </dependency>
     </dependencies>
 
@@ -71,6 +67,14 @@
             <artifactId>antlr4-maven-plugin</artifactId>
             <version>${antlr4.version}</version>
         </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

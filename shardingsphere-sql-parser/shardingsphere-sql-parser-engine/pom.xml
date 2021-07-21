@@ -8,7 +8,6 @@
         <version>4.1.1</version>
     </parent>
     <name>${project.artifactId}</name>
-    <packaging>pom</packaging>
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -25,13 +24,17 @@
             <artifactId>shardingsphere-spi</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>shardingsphere-sql-parser-mysql</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections4.version}</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>${antlr4.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
