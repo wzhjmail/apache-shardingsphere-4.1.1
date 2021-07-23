@@ -36,6 +36,16 @@ public final class ParseTreeVisitorFactory {
         throw new UnsupportedOperationException(String.format("Cannot support database type '%s'", databaseTypeName));
     }
 
+    public static ParseTreeVisitor newInstance(final Class clazz, final VisitorRule visitorRule) {
+        try{
+            return createParseTreeVisitor((SQLParserConfiguration) clazz.newInstance(), visitorRule.getType());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        throw new UnsupportedOperationException("Cannot support database type mysql - clazz");
+    }
+
     @SneakyThrows
     private static ParseTreeVisitor createParseTreeVisitor(final SQLParserConfiguration configuration, final SQLStatementType type) {
         SQLVisitorFacade visitorFacade = configuration.getVisitorFacadeClass().getConstructor().newInstance();

@@ -38,8 +38,30 @@ public final class SQLParserExecutor {
         return result;
     }
 
+    public ParseASTNode execute(Class clazz) {
+        ParseASTNode result = towPhaseParse(clazz);
+        if (result.getRootNode() instanceof ErrorNode) {
+            throw new SQLParsingException(String.format("Unsupported SQL of `%s`", sql));
+        }
+        return result;
+    }
+
     private ParseASTNode towPhaseParse() {
         SQLParser sqlParser = SQLParserFactory.newInstance(databaseTypeName, sql);
+        try {
+            ((Parser) sqlParser).setErrorHandler(new BailErrorStrategy());
+            ((Parser) sqlParser).getInterpreter().setPredictionMode(PredictionMode.SLL);
+            return (ParseASTNode) sqlParser.parse();
+        } catch (final ParseCancellationException ex) {
+            ((Parser) sqlParser).reset();
+            ((Parser) sqlParser).setErrorHandler(new DefaultErrorStrategy());
+            ((Parser) sqlParser).getInterpreter().setPredictionMode(PredictionMode.LL);
+            return (ParseASTNode) sqlParser.parse();
+        }
+    }
+
+    private ParseASTNode towPhaseParse(Class clazz) {
+        SQLParser sqlParser = SQLParserFactory.newInstance(clazz, sql);
         try {
             ((Parser) sqlParser).setErrorHandler(new BailErrorStrategy());
             ((Parser) sqlParser).getInterpreter().setPredictionMode(PredictionMode.SLL);

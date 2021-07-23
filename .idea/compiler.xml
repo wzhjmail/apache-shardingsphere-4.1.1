@@ -7,17 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shardingsphere-common" />
         <module name="shardingsphere-sql-parser-statement" />
         <module name="shardingsphere-sql-parser-oracle" />
-        <module name="encrypt-core-api" />
         <module name="shardingsphere-sql-parser-spi" />
         <module name="shardingsphere-rewrite-engine" />
         <module name="shardingsphere-spi" />
         <module name="shardingsphere-sql-parser-engine" />
-        <module name="encrypt-core-common" />
+        <module name="shardingsphere-route" />
+        <module name="encrypt-core-api" />
         <module name="shardingsphere-sql-parser-mysql" />
+        <module name="encrypt-core-common" />
         <module name="shardingsphere-sql-parser-binder" />
+        <module name="shardingsphere-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

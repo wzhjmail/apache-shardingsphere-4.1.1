@@ -24,6 +24,8 @@
     <file url="file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-rewrite/shardingsphere-rewrite-engine/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-rewrite/shardingsphere-rewrite-engine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shardingsphere-underlying/shardingsphere-route/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shardingsphere-underlying/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shardingsphere-underlying/src/main/resources" charset="UTF-8" />
   </component>

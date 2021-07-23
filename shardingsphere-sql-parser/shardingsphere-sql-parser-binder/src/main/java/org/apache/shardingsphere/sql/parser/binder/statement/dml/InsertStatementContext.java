@@ -1,3 +1,20 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package org.apache.shardingsphere.sql.parser.binder.statement.dml;
 
 import lombok.Getter;
@@ -16,24 +33,20 @@ import org.apache.shardingsphere.sql.parser.sql.statement.dml.InsertStatement;
 import java.util.*;
 
 /**
- * @ClassName InsertStatementContext
- * @Description
- * @Author wzj
- * @Date 2021/7/15 16:23
- **/
-
+ * Insert SQL statement context.
+ */
 @Getter
 @ToString(callSuper = true)
 public final class InsertStatementContext extends CommonSQLStatementContext<InsertStatement> implements TableAvailable {
-
+    
     private final TablesContext tablesContext;
-
+    
     private final List<String> columnNames;
-
+    
     private final List<InsertValueContext> insertValueContexts;
-
+    
     private final GeneratedKeyContext generatedKeyContext;
-
+    
     public InsertStatementContext(final SchemaMetaData schemaMetaData, final List<Object> parameters, final InsertStatement sqlStatement) {
         super(sqlStatement);
         tablesContext = new TablesContext(sqlStatement.getTable());
@@ -41,7 +54,7 @@ public final class InsertStatementContext extends CommonSQLStatementContext<Inse
         insertValueContexts = getInsertValueContexts(parameters);
         generatedKeyContext = new GeneratedKeyContextEngine(schemaMetaData).createGenerateKeyContext(parameters, sqlStatement).orElse(null);
     }
-
+    
     private List<InsertValueContext> getInsertValueContexts(final List<Object> parameters) {
         List<InsertValueContext> result = new LinkedList<>();
         int parametersOffset = 0;
@@ -52,19 +65,19 @@ public final class InsertStatementContext extends CommonSQLStatementContext<Inse
         }
         return result;
     }
-
+    
     /**
      * Get column names for descending order.
-     *
+     * 
      * @return column names for descending order
      */
     public Iterator<String> getDescendingColumnNames() {
         return new LinkedList<>(columnNames).descendingIterator();
     }
-
+    
     /**
      * Get grouped parameters.
-     *
+     * 
      * @return grouped parameters
      */
     public List<List<Object>> getGroupedParameters() {
@@ -74,16 +87,16 @@ public final class InsertStatementContext extends CommonSQLStatementContext<Inse
         }
         return result;
     }
-
+    
     /**
      * Get generated key context.
-     *
+     * 
      * @return generated key context
      */
     public Optional<GeneratedKeyContext> getGeneratedKeyContext() {
         return Optional.ofNullable(generatedKeyContext);
     }
-
+    
     @Override
     public Collection<SimpleTableSegment> getAllTables() {
         return Collections.singletonList(getSqlStatement().getTable());

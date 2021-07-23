@@ -277,7 +277,7 @@ public final class MySQLDDLVisitor extends MySQLVisitor implements DDLVisitor {
         return visit(ctx.referenceDefinition());
     }
     
-    private ModifyColumnDefinitionSegment extractModifyColumnDefinition(final Token start, final Token stop, 
+    private ModifyColumnDefinitionSegment extractModifyColumnDefinition(final Token start, final Token stop,
                                                                         final ColumnDefinitionContext columnDefinition, final FirstOrAfterColumnContext firstOrAfterColumn) {
         ModifyColumnDefinitionSegment result = new ModifyColumnDefinitionSegment(start.getStartIndex(), stop.getStopIndex(),
                 (ColumnDefinitionSegment) visit(columnDefinition));

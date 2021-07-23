@@ -47,8 +47,8 @@ public class SqlStatementParseTest {
         //System.out.println(sqlRewriteResult.getSql());
 
         String sql = "select id,name from stu where id=?";
-        ParseTree parseTree = (new SQLParserExecutor("MySQL", sql)).execute().getRootNode();
         NewInstanceServiceLoader.register(SQLParserConfiguration.class);
+        ParseTree parseTree = (new SQLParserExecutor("MySQL", sql)).execute().getRootNode();
         SQLStatement result = (SQLStatement) ParseTreeVisitorFactory.newInstance("MySQL", VisitorRule.valueOf(parseTree.getClass())).visit(parseTree);
         System.out.println(result);
     }

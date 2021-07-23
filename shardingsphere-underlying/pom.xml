@@ -17,5 +17,6 @@
     <modules>
     <module>shardingsphere-rewrite</module>
     <module>shardingsphere-common</module>
+        <module>shardingsphere-route</module>
     </modules>
 </project>

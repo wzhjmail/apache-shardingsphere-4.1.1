@@ -32,13 +32,22 @@ public final class SQLParserFactory {
      * @return SQL parser
      */
     public static SQLParser newInstance(final String databaseTypeName, final String sql) {
-        Collection<SQLParserConfiguration> configurations = NewInstanceServiceLoader.newServiceInstances(SQLParserConfiguration.class);
-        for (SQLParserConfiguration each : configurations) {
+        for (SQLParserConfiguration each : NewInstanceServiceLoader.newServiceInstances(SQLParserConfiguration.class)) {
             if (each.getDatabaseTypeName().equals(databaseTypeName)) {
                 return createSQLParser(sql, each);
             }
         }
         throw new UnsupportedOperationException(String.format("Cannot support database type '%s'", databaseTypeName));
+
+    }
+
+    public static SQLParser newInstance(final Class clazz, final String sql) {
+       try{
+           return createSQLParser(sql, (SQLParserConfiguration) clazz.newInstance());
+       }catch (Exception e){
+           e.printStackTrace();
+       }
+        throw new UnsupportedOperationException("Cannot support database type mysql - clazz");
     }
 
     @SneakyThrows
